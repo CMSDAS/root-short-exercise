@@ -1,13 +1,13 @@
 ---
 title: "Introduction"
-teaching: 0
+teaching: 5
 exercises: 0
 questions:
-- "Key question (FIXME)"
+- "What is the purpose if this analysis?"
 objectives:
-- "First learning objective. (FIXME)"
+- "Understand why we prepared for you this example analysis"
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- "Example analysis used as common baseline for learning the technologies discussed at the workshop"
 ---
 FIXME
 
