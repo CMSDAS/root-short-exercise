@@ -2,9 +2,9 @@
 title: Setup
 ---
 
-First, download the tarball with the required files following the following link and unpack the archive:
+First, download the required files using the following link and unpack the archive:
 
-[FIXME](FIXME)
+[https://github.com/stwunsch/awesome-workshop-analysis/archive/master.zip FIXME: Update this link!](https://github.com/stwunsch/awesome-workshop-analysis/archive/master.zip)
 
 Next, please select one of the following solutions to get the required software:
 
