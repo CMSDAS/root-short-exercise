@@ -20,6 +20,19 @@ To combine the histograms produced in the previous step to meaningful plots, run
 bash plot.sh /path/to/histograms.root /output/dir/with/plots
 ```
 
-The Python script generates for each variable a `png` and `pdf` image file, which can be viewed with a program of your choice.
+The Python script generates for each variable a `png` and `pdf` image file, which can be viewed with a program of your choice. Two example outputs are shown below. Note that this analysis runs only over a fraction of the available data.
+
+<div class="row">
+  <div class="col-md-6">
+
+    <img src="https://raw.githubusercontent.com/cms-opendata-analyses/HiggsTauTauNanoAODOutreachAnalysis/2012/plots/m_vis.png" align="middle">
+
+  </div>
+  <div class="col-md-6">
+
+    <img src="https://raw.githubusercontent.com/cms-opendata-analyses/HiggsTauTauNanoAODOutreachAnalysis/2012/plots/eta_2.png" align="middle">
+
+  </div>
+</div>
 
 {% include links.md %}
