@@ -11,17 +11,15 @@ Example analysis of Higgs boson decays to two tau leptons used to teach software
 <div class="row">
   <div class="col-md-6">
 
-    <img src="fig/workshop-logo.png">
+    <img src="fig/workshop-logo.png" align="middle" height="100%" width="100%">
 
   </div>
   <div class="col-md-6">
 
-    <img src="https://raw.githubusercontent.com/cms-opendata-analyses/HiggsTauTauNanoAODOutreachAnalysis/2012/plots/m_vis.png">
+    <img src="https://raw.githubusercontent.com/cms-opendata-analyses/HiggsTauTauNanoAODOutreachAnalysis/2012/plots/m_vis.png" align="middle" height="75%" width="75%">
 
   </div>
 </div>
-
-**TODO:** Align images vertically
 
 <!-- this is an html comment -->
 
