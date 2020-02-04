@@ -20,12 +20,12 @@ The physical process of interest, also often called signal, is the production of
 <div class="row">
   <div class="col-md-6">
 
-    <img src="http://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-13-004/CMS-HIG-13-004_Figure_001-a.png">
+    <img src="http://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-13-004/CMS-HIG-13-004_Figure_001-a.png" height="70%" width="70%">
 
   </div>
   <div class="col-md-6">
 
-    <img src="http://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-13-004/CMS-HIG-13-004_Figure_001-b.png">
+    <img src="http://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-13-004/CMS-HIG-13-004_Figure_001-b.png" height="70%" width="70%">
 
   </div>
 </div>
