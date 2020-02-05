@@ -8,12 +8,18 @@ objectives:
 - "Perform this step of the analysis by yourself"
 keypoints:
 - "We reduce the inital datasets by filtering suitable events and the selection of the interesting observables."
-- "This step includes (in this analysis) finding per event the interesting muon-tau pair."
+- "This step includes finding the interesting muon-tau pair in each selected event."
 ---
 
-In this step, the NanoAOD files containing data and simulated events are pre-processed. This step is here called skimming since the event selection reduces the size of the datasets significantly. In addition, we perform a pair selection to find from the muon and tau collections the pair which originates most likely from a Higgs boson.
+In this step, the NanoAOD files containing data and simulated events are pre-processed. This step is called skimming since the event selection reduces the size of the datasets significantly. In addition, we perform a pair selection to find from the muon and tau collections the pair which is most likely to have originated from a Higgs boson.
 
-This step is implemented in the file `skim.cxx` and is written in C++ for performance reasons. To compile and run the program, use the script `skim.sh`. Note that you may need to change in the script the compiler based on your system.
+This step is implemented in the file `skim.cxx` and is written in C++ for performance reasons. To compile and run the program, use the script `skim.sh`. Note that you may need to change the compiler in the script based on your system.
+
+If needed, initialize your CERN kerberos credentials to enable eos access:
+
+```bash
+kinit [your_CERN_username]@CERN.CH
+```
 
 Execute the following command to run the skimming:
 
@@ -28,6 +34,6 @@ bash download.sh /input/dir/with/samples
 bash skim.sh /input/dir/with/samples /output/dir/with/skims
 ```
 
-The result of this step are files with the suffix `*Skim.root`.
+The results of this step are files in `/output/dir/with/skims` with the suffix `*Skim.root`.
 
 {% include links.md %}

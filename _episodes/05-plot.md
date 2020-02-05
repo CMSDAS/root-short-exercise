@@ -7,14 +7,14 @@ questions:
 objectives:
 - "Make plots of all observables"
 keypoints:
-- "The plotting combines all histograms to the estimations of the physical processes to create a figure with a physical meaning."
+- "The plotting combines all histograms to produce estimates of the physical processes and create a figure with a physical meaning."
 - "The plots show the share of the contributing physical processes to the data."
 - "We do not include any systematic uncertainties in this example."
 ---
 
-Finally, the histograms are combined to the final plots showing the data taken with the CMS detector compared to the expectation from the background estimations. These plots allow to study the contribution of the different physics processes to the data taken with the CMS detector and represent the first step to answer the question whether we can verify the existence of the Higgs boson.
+Finally, the histograms are combined to produce the final plots showing the data taken with the CMS detector compared with the expectation from the background estimates. These plots allow one to study the contribution of the different physics processes to the data taken with the CMS detector and represent the first step towards verifying the existence of the Higgs boson.
 
-To combine the histograms produced in the previous step to meaningful plots, run the following command.
+To combine the histograms produced in the previous step into meaningful plots, run the following command.
 
 ```bash
 bash plot.sh /path/to/histograms.root /output/dir/with/plots
