@@ -15,12 +15,6 @@ In this step, the NanoAOD files containing data and simulated events are pre-pro
 
 This step is implemented in the file `skim.cxx` and is written in C++ for performance reasons. To compile and run the program, use the script `skim.sh`. Note that you may need to change the compiler in the script based on your system.
 
-If needed, initialize your CERN kerberos credentials to enable eos access:
-
-```bash
-kinit [your_CERN_username]@CERN.CH
-```
-
 Execute the following command to run the skimming:
 
 ```bash
