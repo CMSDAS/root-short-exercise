@@ -22,6 +22,6 @@ bash fit.sh /path/to/histograms.root /output/dir/with/plot
 
 The resulting plot (see below) shows the scan of the profile likelihood from which we can extract the best fit value of the signal strength modifier for the Z→ττ process and the uncertainty associated with this parameter.
 
-![](fig/fit.png)
+![](../fig/fit.png)
 
 {% include links.md %}
