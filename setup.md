@@ -8,12 +8,11 @@ First, download the required files using the following link and unpack the archi
 
 [https://github.com/awesome-workshop/payload/archive/master.zip](https://github.com/awesome-workshop/payload/archive/master.zip)
 
-For download to LXPLUS, you can use the following command:
+For download via the terminal, you can use the following command:
 
-~~~
+```bash
 curl -OL https://github.com/awesome-workshop/payload/archive/master.zip
-~~~
-{: .language-shell}
+```
 
 Next, please select one of the following solutions to get the required software.
 
@@ -39,7 +38,7 @@ docker run -it --rm -v $PWD:/analysis -w /analysis rootproject/root-conda /bin/b
 
 Thanks the volume mount set up with the `-v` command, any output saved under your working directory (`/analysis`) will automatically appear on your local machine in the location from which you started the container.
 
-When you're finished working in the container type `exit` to get out of it. 
+When you're finished working in the container type `exit` to get out of it.
 
 **Note:** The `--rm` option causes the container to be deleted once you're finished working with it. If you want the container to persist on your machine after you exit, remove the `--rm` option from the startup command.
 
