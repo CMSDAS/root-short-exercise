@@ -31,7 +31,7 @@ cd /path/to/analysis/repo
 
 start up a container from the `rootproject/root-conda` docker image as follows:
 
-```
+```bash
 docker run -it --rm -v $PWD:/analysis -w /analysis rootproject/root-conda /bin/bash
 #if you run into a premission error, use "sudo docker run ..." as a quick fix
 # to fix this for the future, see https://docs.docker.com/install/linux/linux-postinstall/
