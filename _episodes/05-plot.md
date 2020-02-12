@@ -25,12 +25,12 @@ The Python script generates for each variable a `png` and `pdf` image file, whic
 <div class="row">
   <div class="col-md-6">
 
-    <img src="https://raw.githubusercontent.com/cms-opendata-analyses/HiggsTauTauNanoAODOutreachAnalysis/2012/plots/m_vis.png" align="middle">
+    <img src="../fig/m_vis.png" align="middle">
 
   </div>
   <div class="col-md-6">
 
-    <img src="https://raw.githubusercontent.com/cms-opendata-analyses/HiggsTauTauNanoAODOutreachAnalysis/2012/plots/eta_2.png" align="middle">
+    <img src="../fig/eta_2.png" align="middle">
 
   </div>
 </div>

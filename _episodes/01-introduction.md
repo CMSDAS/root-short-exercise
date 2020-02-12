@@ -27,12 +27,12 @@ Two example results produced by this analysis can be seen below. The plots show 
 <div class="row">
   <div class="col-md-6">
 
-    <img src="https://raw.githubusercontent.com/cms-opendata-analyses/HiggsTauTauNanoAODOutreachAnalysis/2012/plots/m_vis.png">
+    <img src="../fig/m_vis.png">
 
   </div>
   <div class="col-md-6">
 
-    <img src="https://raw.githubusercontent.com/cms-opendata-analyses/HiggsTauTauNanoAODOutreachAnalysis/2012/plots/eta_2.png">
+    <img src="../fig/eta_2.png">
 
   </div>
 </div>

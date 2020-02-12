@@ -12,7 +12,7 @@ keypoints:
 
 This step performs a fit on the histograms of the visible mass plot to perform a measurement.
 
-![](https://raw.githubusercontent.com/cms-opendata-analyses/HiggsTauTauNanoAODOutreachAnalysis/2012/plots/m_vis.png)
+![](../fig/m_vis.png)
 
 Because the contribution of the Higgs signal is too tiny with the inclusive selection, we fit fors the "signal" strength of the Z→ττ process. You can find the fitting implementation in the Python script `fit.py`. Use the following command to run the fit.
 
