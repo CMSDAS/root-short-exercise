@@ -22,7 +22,7 @@ mkdir -p $HOME/awesome-workshop/skims
 bash skim.sh root://eospublic.cern.ch//eos/root-eos/HiggsTauTauReduced/ $HOME/awesome-workshop/skims
 ```
 
-In case you want to download the files first, for example if you want to run many times, execute the following two commands.
+In case you want to download the files first, for example if you want to run many times, execute the following two commands. The overall size of the inital samples is 6.5 GB.
 
 ```bash
 mkdir -p $HOME/awesome-workshop/samples $HOME/awesome-workshop/skims
