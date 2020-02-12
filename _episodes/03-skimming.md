@@ -18,16 +18,18 @@ This step is implemented in the file `skim.cxx` and is written in C++ for perfor
 Execute the following command to run the skimming:
 
 ```bash
-bash skim.sh root://eospublic.cern.ch//eos/root-eos/HiggsTauTauReduced/ /output/dir/with/skims
+mkdir -p $HOME/awesome-workshop/skim
+bash skim.sh root://eospublic.cern.ch//eos/root-eos/HiggsTauTauReduced/ $HOME/awesome-workshop/skim
 ```
 
 In case you want to download the files first, for example if you want to run many times, execute the following two commands.
 
 ```bash
-bash download.sh /input/dir/with/samples
-bash skim.sh /input/dir/with/samples /output/dir/with/skims
+mkdir -p $HOME/awesome-workshop/samples $HOME/awesome-workshop/skim
+bash download.sh $HOME/awesome-workshop/samples
+bash skim.sh $HOME/awesome-workshop/samples $HOME/awesome-workshop/skim
 ```
 
-The results of this step are files in `/output/dir/with/skims` with the suffix `*Skim.root`.
+The results of this step are files in `$HOME/awesome-workshop/skim` with the suffix `*Skim.root`.
 
 {% include links.md %}

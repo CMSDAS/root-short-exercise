@@ -17,7 +17,8 @@ Finally, the histograms are combined to produce the final plots showing the data
 To combine the histograms produced in the previous step into meaningful plots, run the following command.
 
 ```bash
-bash plot.sh /path/to/histograms.root /output/dir/with/plots
+mkdir -p $HOME/awesome-workshop/plots
+bash plot.sh $HOME/awesome-workshop/histograms/histograms.root $HOME/awesome-workshop/plots
 ```
 
 The Python script generates for each variable a `png` and `pdf` image file, which can be viewed with a program of your choice. Two example outputs are shown below. Note that this analysis runs only over a fraction of the available data.

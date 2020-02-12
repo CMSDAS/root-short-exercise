@@ -17,7 +17,8 @@ This step performs a fit on the histograms of the visible mass plot to perform a
 Because the contribution of the Higgs signal is too tiny with the inclusive selection, we fit fors the "signal" strength of the Z→ττ process. You can find the fitting implementation in the Python script `fit.py`. Use the following command to run the fit.
 
 ```bash
-bash fit.sh /path/to/histograms.root /output/dir/with/plot
+mkdir -p $HOME/awesome-workshop/fit
+bash fit.sh $HOME/awesome-workshop/histograms/histograms.root $HOME/awesome-workshop/fit
 ```
 
 The resulting plot (see below) shows the scan of the profile likelihood from which we can extract the best fit value of the signal strength modifier for the Z→ττ process and the uncertainty associated with this parameter.
