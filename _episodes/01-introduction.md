@@ -16,6 +16,8 @@ keypoints:
 
 We have prepared this example analysis as common baseline for learning the technologies discussed in this workshop. The goal is to have a working example that is simple yet complex enough to demonstrate common problems and their solutions in physics analysis.
 
+The analysis is taken from the [CERN Open Data portal](http://opendata.web.cern.ch/record/12350) and modified to fit our needs. You can find there additional information complementing the explanation below.
+
 ## The analysis
 
 This analysis uses data and simulated events at the CMS experiment from 2012 with the goal of studying decays of a Higgs boson into two tau leptons. The final state is a muon lepton and a hadronically decaying tau lepton. The analysis loosely follows the setup [of the official CMS analysis published in 2014](http://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-13-004/index.html).
