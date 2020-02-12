@@ -8,6 +8,13 @@ First, download the required files using the following link and unpack the archi
 
 [https://github.com/awesome-workshop/payload/archive/master.zip](https://github.com/awesome-workshop/payload/archive/master.zip)
 
+For download to LXPLUS, you can use the following command:
+
+~~~
+curl -OL https://github.com/awesome-workshop/payload/archive/master.zip
+~~~
+{: .language-shell}
+
 Next, please select one of the following solutions to get the required software.
 
 ## Set up the software
