@@ -25,7 +25,7 @@ Timetable: [Link to the Indico agenda](https://indico.cern.ch/event/854880/)
 
 CERN Mattermost server: [mattermost.web.cern.ch](https://mattermost.web.cern.ch)
 
-<b><font color="red">f you find you are having issues, then don’t hesitate to ask. We have created a Mattermost channel for this purpose. Click on the invitation link below and start asking questions!</font></b>
+<b><font color="red">If you find you are having issues, then don’t hesitate to ask. We have created a Mattermost channel for this purpose. Click on the invitation link below and start asking questions!</font></b>
 
 **Invitation link for the Awesome Workshop team on Mattermost: [Click me!](https://mattermost.web.cern.ch/signup_user_complete/?id=t9zkdocffbbozqcdy193myre8y)**
 
