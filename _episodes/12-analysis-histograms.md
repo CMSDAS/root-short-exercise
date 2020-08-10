@@ -1,9 +1,10 @@
 ---
-title: "Step 2: Produce histograms"
+title: "NanoAOD analysis: Produce histograms"
 teaching: 5
 exercises: 10
 questions:
-- "Which histograms do we need?"
+- "How to produce efficiently many histograms?"
+- "How does an analysis with `RDataFrame` looks like in Python?"
 objectives:
 - "Produce all the histograms for the plots"
 - "Understand why we need so many histograms for a single plot"

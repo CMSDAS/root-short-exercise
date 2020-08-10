@@ -1,9 +1,10 @@
 ---
-title: "Step 1: Skim the initial datasets"
+title: "NanoAOD analysis: Skim the initial datasets"
 teaching: 5
 exercises: 10
 questions:
-- "What happens in the skimming step?"
+- "How can I process large amounts of data efficiently?"
+- "How does an analysis with `RDataFrame` looks like in C++?"
 objectives:
 - "Perform this step of the analysis by yourself"
 keypoints:

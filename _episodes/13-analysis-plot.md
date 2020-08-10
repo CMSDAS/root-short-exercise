@@ -1,9 +1,9 @@
 ---
-title: "Step 3: Make the plots"
+title: "NanoAOD analysis: Make the plots"
 teaching: 5
 exercises: 10
 questions:
-- "How do we combine the histograms?"
+- "How can I make high quality plots with ROOT?"
 objectives:
 - "Make plots of all observables"
 keypoints:
