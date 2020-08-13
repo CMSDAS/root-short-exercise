@@ -1,14 +1,15 @@
 ---
-title: "Physics background"
+title: "NanoAOD analysis: Introduction"
 teaching: 15
 exercises: 0
 questions:
+- "What am I supposed to learn from this analysis?"
 - "What is the physics behind the data?"
 objectives:
 - "Learn the basics of the physics processes present in the data"
 keypoints:
 - "Analysis studies Higgs boson decays to two tau leptons with a muon and a hadronic tau in the final state"
-- "The analysis estimates all processes but QCD directly from simulation"
+- "The following steps will show in a hands-on the use of `RDataFrame` in an actual analysis"
 ---
 
 The following sections describe the relevant physics processes of the analysis.

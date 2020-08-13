@@ -1,9 +1,10 @@
 ---
-title: "Step 2: Produce histograms"
+title: "NanoAOD analysis: Produce histograms"
 teaching: 5
 exercises: 10
 questions:
-- "Which histograms do we need?"
+- "How to produce efficiently many histograms?"
+- "How does an analysis with `RDataFrame` looks like in Python?"
 objectives:
 - "Produce all the histograms for the plots"
 - "Understand why we need so many histograms for a single plot"
@@ -17,7 +18,8 @@ The first step produces skimmed datasets from the original files but still prese
 This step is implemented in Python in the file `histograms.py`. Run the following script to process the previously produced reduced datasets.
 
 ```bash
-bash histograms.sh /input/dir/with/skims /output/dir/with/histograms
+mkdir -p $HOME/awesome-workshop/histograms
+bash histograms.sh $HOME/awesome-workshop/skims $HOME/awesome-workshop/histograms
 ```
 
 The script produces the file `histograms.root`, which contains the histograms. You can have a look at the plain histograms using the ROOT browser, which is started up with the command `rootbrowse histograms.root`.

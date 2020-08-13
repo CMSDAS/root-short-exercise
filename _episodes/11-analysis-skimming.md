@@ -1,9 +1,10 @@
 ---
-title: "Step 1: Skim the initial datasets"
+title: "NanoAOD analysis: Skim the initial datasets"
 teaching: 5
 exercises: 10
 questions:
-- "What happens in the skimming step?"
+- "How can I process large amounts of data efficiently?"
+- "How does an analysis with `RDataFrame` looks like in C++?"
 objectives:
 - "Perform this step of the analysis by yourself"
 keypoints:
@@ -18,16 +19,18 @@ This step is implemented in the file `skim.cxx` and is written in C++ for perfor
 Execute the following command to run the skimming:
 
 ```bash
-bash skim.sh root://eospublic.cern.ch//eos/root-eos/HiggsTauTauReduced/ /output/dir/with/skims
+mkdir -p $HOME/awesome-workshop/skims
+bash skim.sh root://eospublic.cern.ch//eos/root-eos/HiggsTauTauReduced/ $HOME/awesome-workshop/skims
 ```
 
-In case you want to download the files first, for example if you want to run many times, execute the following two commands.
+In case you want to download the files first, for example if you want to run many times, execute the following two commands. The overall size of the inital samples is 6.5 GB.
 
 ```bash
-bash download.sh /input/dir/with/samples
-bash skim.sh /input/dir/with/samples /output/dir/with/skims
+mkdir -p $HOME/awesome-workshop/samples $HOME/awesome-workshop/skims
+bash download.sh $HOME/awesome-workshop/samples
+bash skim.sh $HOME/awesome-workshop/samples $HOME/awesome-workshop/skims
 ```
 
-The results of this step are files in `/output/dir/with/skims` with the suffix `*Skim.root`.
+The results of this step are files in `$HOME/awesome-workshop/skims` with the suffix `*Skim.root`.
 
 {% include links.md %}
