@@ -13,7 +13,7 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 > ## How does this work?
 > - Office hours?
 > - Discord channel?
-{: .checklist}
+{: .keypoints}
 
 <!-- this is an html comment -->
 
