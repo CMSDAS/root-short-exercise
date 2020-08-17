@@ -10,6 +10,12 @@ keypoints:
 - "TODO"
 ---
 
+- TH1F
+- TGraph
+- Basic plotting
+- TBrowser
+- root executables!
+- TTree::Draw
 
 {% include links.md %}
 
