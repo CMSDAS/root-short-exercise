@@ -6,6 +6,15 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 
 ![](fig/banner.png)
 
+> ## Welcome to a lesson about efficient analysis with ROOT!
+> TODO
+{: .callout}
+
+> ## How does this work?
+> - Office hours?
+> - Discord channel?
+{: .checklist}
+
 <!-- this is an html comment -->
 
 {% include links.md %}

@@ -78,7 +78,9 @@ root [3] TreeS->Print() // Show content of the dataset
 root [4] TreeS->Draw("var1") // Draw a histogram of the variable var1
 ```
 
-![](../fig/trees_draw.png)
+<kbd>
+<img src="../fig/trees_draw.png">
+</kbd>
 
 {% include links.md %}
 
