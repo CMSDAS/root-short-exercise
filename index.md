@@ -22,7 +22,7 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 > - Add a short description of the lesson on the TWiki
 > - Text for lesson 1: Introduction
 > - Lesson 4: Commonly used features in ROOT
-> - Find a funny comic for the finish!
+> - Find a (more?) funny comic for the finish!
 {: .checklist}
 
 <!-- this is an html comment -->

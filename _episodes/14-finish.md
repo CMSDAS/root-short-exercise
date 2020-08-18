@@ -1,9 +1,9 @@
 ---
 layout: break
-title: "Great, you finished!"
+title: "Success, you finished!"
 break: 15
 ---
 
-![](https://imgs.xkcd.com/comics/compiling.png)
+![](https://assets.amuniversal.com/fab55890f648012ff3f1001dd8b71c47)
 
 {% include links.md %}
