@@ -7,7 +7,7 @@ title: Setup
 >
 > But if you feel confident enough, you can also run the lesson on your own system! You will find further information in the episode about how to get ROOT.
 >
-> Some reminders follow about `ssh`, X forwarding and `scp`.
+> Some reminders follow about `ssh`, X forwarding and `scp`. Also note that we always assume that you use the `bash` shell!
 {: .keypoints}
 
 ### Connect to lxplus with X forwarding

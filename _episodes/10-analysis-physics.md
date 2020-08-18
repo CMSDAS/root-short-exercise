@@ -7,12 +7,15 @@ questions:
 - "What is the physics behind the data?"
 objectives:
 - "Learn the basics of the physics processes present in the data"
+- "Learn about the content of the (reduced) NanoAOD files"
 keypoints:
 - "Analysis studies Higgs boson decays to two tau leptons with a muon and a hadronic tau in the final state"
-- "The following steps will show in a hands-on the use of `RDataFrame` in an actual analysis"
+- "The input files are (reduced) CMS NanoAOD, being very close to actual analysis in CMS"
+- "The following steps will show in a hands-on the use of RDataFrame in an actual analysis"
 ---
 
-The following sections describe the relevant physics processes of the analysis.
+> This analysis shows you how an analysis with CMS NanoAOD files and RDataFrame can be performed, from the inital files to the result plots.
+{: .testimonial}
 
 ## Signal process
 
@@ -58,5 +61,53 @@ Top anti-top pairs are produced at the LHC by quark anti-quark annihilation or g
 ### QCD
 
 The QCD multijet background describes decays with a large number of jets, which occurs very often at the LHC. Such events can be falsely selected for the analysis due to misidentifications. Because a proper simulation of this process is complex and computational expensive, the contribution is not estimated from simulation but from data itself. Therefore, we select tau pairs with the same selection as the signal, but with the modified requirement that both tau leptons have the same charge. Then, all known processes from simulation are subtracted from the histogram. Using the resulting histogram as estimation for the QCD multijet process is possible because the production of misidentified tau lepton candidates is independent of the charge.
+
+## Files and dataset content
+
+The used files and the content of the datasets, for example [the simulated Standard Model Higgs boson produced by Gluon fusion](http://opendata.web.cern.ch/record/12351), can be found on [the CERN Open Data portal](http://opendata.web.cern.ch/record/12350).
+
+> ## Have a look at the content of the (reduced) CMS NanoAOD files!
+> You can just look at the content on the CERN Open Data portal (follow for example [this link](http://opendata.web.cern.ch/record/12351)) or take one of the files you will download below and investigate the content with ROOT, such as shown in the previous episodes!
+{: .challenge}
+
+> ## Why NanoAOD?
+> The NanoAOD format is a small version of the MiniAOD format (which is a small version of the AOD format) with a size of about 2 kB/Event. Going towards Run 3 and 4 of the LHC, this format will be very likely the default for most CMS analyses to be able to process an unpreceded amount of data!
+{: .keypoints}
+
+> ## Why *reduced* NanoAOD?
+> Note that the used NanoAOD files are reduced versions recreated with open CMS data and simulation from 2012, but you will most likely not see any difference!
+{: .checklist}
+
+## Download the required datasets
+
+Because very likely you will run the code multiple times, we want to speed up the analysis so that you can focus on the software. To do so, download with `xrdcp` the files on your computer or any other system with ROOT (v6.18 or later) available. The size of downloaded files sum up to about 6.5 GB and represent only 10% of the original files you can find on the Open Data portal, which enables you to run the full analysis in a under five minutes.
+
+Alternatively, you can download the files manually via HTTP from [https://root.cern/files/HiggsTauTauReduced/](https://root.cern/files/HiggsTauTauReduced/).
+
+```bash
+SAMPLES=(
+    GluGluToHToTauTau
+    VBF_HToTauTau
+    DYJetsToLL
+    TTbar
+    W1JetsToLNu
+    W2JetsToLNu
+    W3JetsToLNu
+    Run2012B_TauPlusX
+    Run2012C_TauPlusX
+    )
+
+for SAMPLE in ${SAMPLES[@]}
+do
+    # Via XRootD:
+    xrdcp root://eospublic.cern.ch//eos/root-eos/HiggsTauTauReduced/${SAMPLE}.root .
+    # Via HTTP:
+    # curl -O https://root.cern/files/HiggsTauTauReduced/${SAMPLE}.root
+done
+```
+
+> ## Download the files!
+> Choose one of the options shown above and download the files!
+{: .challenge}
 
 {% include links.md %}

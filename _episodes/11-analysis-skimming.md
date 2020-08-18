@@ -4,33 +4,36 @@ teaching: 5
 exercises: 10
 questions:
 - "How can I process large amounts of data efficiently?"
-- "How does an analysis with `RDataFrame` looks like in C++?"
+- "How does an analysis with RDataFrame looks like in C++?"
 objectives:
 - "Perform this step of the analysis by yourself"
 keypoints:
 - "We reduce the inital datasets by filtering suitable events and the selection of the interesting observables."
 - "This step includes finding the interesting muon-tau pair in each selected event."
+- "We use RDataFrame in C++ to perform the computational expensive part of the analysis as efficient as possible and enable the implicit multi-threading!"
 ---
 
 In this step, the NanoAOD files containing data and simulated events are pre-processed. This step is called skimming since the event selection reduces the size of the datasets significantly. In addition, we perform a pair selection to find from the muon and tau collections the pair which is most likely to have originated from a Higgs boson.
 
-This step is implemented in the file `skim.cxx` and is written in C++ for performance reasons. To compile and run the program, use the script `skim.sh`. Note that you may need to change the compiler in the script based on your system.
+This step is implemented in the file `skim.cxx` [here](../code/skim.cxx) and is written in C++ for performance reasons.
 
-Execute the following command to run the skimming:
+> ## Download the code and investigate the content!
+> Download the file [`skim.cxx`](../code/skim.cxx) and investigate the content. You can easily follow the steps in the `main` function!
+{: .challenge}
 
-```bash
-mkdir -p $HOME/awesome-workshop/skims
-bash skim.sh root://eospublic.cern.ch//eos/root-eos/HiggsTauTauReduced/ $HOME/awesome-workshop/skims
-```
+> ## Compile the C++ program!
+> Compile the file [`skim.cxx`](../code/skim.cxx) to an executable!
+{: .challenge}
 
-In case you want to download the files first, for example if you want to run many times, execute the following two commands. The overall size of the inital samples is 6.5 GB.
+> ## Compile the C++ program!
+> Use the following command and replace `g++` with the C++ compiler of your choice.
+> ```bash
+> g++ -O3 -o skim skim.cxx $(root-config --cflags --libs)
+> ```
+{: .solution}
 
-```bash
-mkdir -p $HOME/awesome-workshop/samples $HOME/awesome-workshop/skims
-bash download.sh $HOME/awesome-workshop/samples
-bash skim.sh $HOME/awesome-workshop/samples $HOME/awesome-workshop/skims
-```
-
-The results of this step are files in `$HOME/awesome-workshop/skims` with the suffix `*Skim.root`.
+> ## Run the C++ program and investigate the output!
+> Run it! Note that the program picks up the files from the same directory in which you run it. Also the results of this step are files in the same directory in which you have run the executable and have the filenames `*Skim.root`.
+{: .challenge}
 
 {% include links.md %}

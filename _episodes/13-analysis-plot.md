@@ -8,20 +8,22 @@ objectives:
 - "Make plots of all observables"
 keypoints:
 - "The plotting combines all histograms to produce estimates of the physical processes and create a figure with a physical meaning."
-- "The plots show the share of the contributing physical processes to the data."
-- "We do not include any systematic uncertainties in this example."
+- "The plots show the share of the contributing physical processes to the data, but without systematic uncertainties."
+- "The script shows how you can produce paper quality plots with ROOT!"
 ---
 
-Finally, the histograms are combined to produce the final plots showing the data taken with the CMS detector compared with the expectation from the background estimates. These plots allow one to study the contribution of the different physics processes to the data taken with the CMS detector and represent the first step towards verifying the existence of the Higgs boson.
+> Finally, the histograms are combined to produce the final plots showing the data taken with the CMS detector compared with the expectation from the background estimates. These plots allow one to study the contribution of the different physics processes to the data taken with the CMS detector and represent the first step towards verifying the existence of the Higgs boson.
+{: .testimonial}
 
-To combine the histograms produced in the previous step into meaningful plots, run the following command.
+This step is again implemented for convenience in Python and can be found in the file `plot.py`, which you can download [here](../code/plot.py).
 
-```bash
-mkdir -p $HOME/awesome-workshop/plots
-bash plot.sh $HOME/awesome-workshop/histograms/histograms.root $HOME/awesome-workshop/plots
-```
+> ## Investigate and run the Python script!
+> Have a look at [the code](../code/plot.py) and run it! Note again that the program picks up the files from the same directory in which you run it.
+{: .challenge}
 
-The Python script generates for each variable a `png` and `pdf` image file, which can be viewed with a program of your choice. Two example outputs are shown below. Note that this analysis runs only over a fraction of the available data.
+> ## Investigate the output!
+> The Python script generates for each variable a `png` and `pdf` image file, which can be viewed with a program of your choice. Only two example outputs are shown below, but you can investigate 34 of such plots after you have run the script!
+{: .challenge}
 
 <div class="row">
   <div class="col-md-6">
