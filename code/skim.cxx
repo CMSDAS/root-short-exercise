@@ -53,15 +53,14 @@ const std::vector<std::string> sampleNames = {
 //const float integratedLuminosity = 4.412 * 1000.0; // Run2012B only
 //const float integratedLuminosity = 7.055 * 1000.0; // Run2012C only
 const float integratedLuminosity = 11.467 * 1000.0; // Run2012B+C
-const float scale = 0.1; // We use only 10% of the original dataset
 std::map<std::string, float> eventWeights = {
-    {"GluGluToHToTauTau", 19.6 / 476963.0 * integratedLuminosity * scale},
-    {"VBF_HToTauTau", 1.55 / 491653.0 * integratedLuminosity * scale},
-    {"DYJetsToLL", 3503.7 / 30458871.0 * integratedLuminosity * scale},
-    {"TTbar", 225.2 / 6423106.0 * integratedLuminosity * scale},
-    {"W1JetsToLNu", 6381.2 / 29784800.0 * integratedLuminosity * scale},
-    {"W2JetsToLNu", 2039.8 / 30693853.0 * integratedLuminosity * scale},
-    {"W3JetsToLNu", 612.5 / 15241144.0 * integratedLuminosity * scale},
+    {"GluGluToHToTauTau", 19.6 / 476963.0 * integratedLuminosity},
+    {"VBF_HToTauTau", 1.55 / 491653.0 * integratedLuminosity},
+    {"DYJetsToLL", 3503.7 / 30458871.0 * integratedLuminosity},
+    {"TTbar", 225.2 / 6423106.0 * integratedLuminosity},
+    {"W1JetsToLNu", 6381.2 / 29784800.0 * integratedLuminosity},
+    {"W2JetsToLNu", 2039.8 / 30693853.0 * integratedLuminosity},
+    {"W3JetsToLNu", 612.5 / 15241144.0 * integratedLuminosity},
     {"Run2012B_TauPlusX", 1.0},
     {"Run2012C_TauPlusX", 1.0},
 };
