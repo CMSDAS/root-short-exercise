@@ -15,4 +15,6 @@ keypoints:
 - "You'll learn to do efficient analysis with an example based on NanoAOD files!"
 ---
 
+Hi there, very welcome in the lesson about efficient analysis with ROOT!
+
 {% include links.md %}
