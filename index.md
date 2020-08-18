@@ -7,7 +7,7 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 ![](fig/banner.png)
 
 > ## Welcome to a lesson about efficient analysis with ROOT!
-> TODO
+> You are about to learn how to perform efficient data analysis!
 {: .callout}
 
 > ## How does this work?
@@ -20,9 +20,9 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 > - Welcome video?
 > - Adapt time estimates in all episodes
 > - Add a short description of the lesson on the TWiki
-> - Text for lesson 1: Introduction
 > - Lesson 4: Commonly used features in ROOT
-> - Find a (more?) funny comic for the finish!
+> - Lesson 6: CMS channels to get help with ROOT?
+> - Remove this box
 {: .checklist}
 
 <!-- this is an html comment -->

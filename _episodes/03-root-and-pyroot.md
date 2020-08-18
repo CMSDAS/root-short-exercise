@@ -3,7 +3,7 @@ title: "ROOT in C++ and Python"
 teaching: 10
 exercises: 0
 questions:
-- "Should I use ROOT from C++ or Python?"
+- "Should I use ROOT in C++ or Python?"
 objectives:
 - "Run with ROOT C++ code interactively!"
 - "Compile C++ programs using ROOT!"

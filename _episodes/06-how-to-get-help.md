@@ -1,5 +1,5 @@
 ---
-title: "How to get help?"
+title: "How to get help with ROOT?"
 teaching: 10
 exercises: 0
 questions:
@@ -9,7 +9,6 @@ objectives:
 - "Learn how to find the official documentation!"
 - "Learn about the ROOT forum to get help!"
 keypoints:
-- "**TODO: Which channels are provided by CMS?**"
 - "User support is an integral part of ROOT!"
 - "[https://root.cern](https://root.cern) is the entry point to find all documentation and the forum"
 - "[The reference guide](https://root.cern/doc/master/index.html) provides in depth technical documentation, but also additional explanation for classes and a huge amount of tutorials explaining features with code"
