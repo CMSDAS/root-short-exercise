@@ -26,7 +26,7 @@ ROOT.gStyle.SetOptStat(0) # Disable the statistics box
 ROOT.gStyle.SetTextFont(42)
 
 # Create a canvas
-c = ROOT.TCanvas('c', 'my canvas', 600, 600)
+c = ROOT.TCanvas('c', 'my canvas', 800, 600)
 
 # Create a histogram with some dummy data and draw it
 data = np.random.randn(1000).astype(np.float32)
@@ -44,7 +44,7 @@ label = ROOT.TLatex()
 label.SetNDC(True)
 label.SetTextSize(0.040)
 label.DrawLatex(0.10, 0.92, '#bf{CMS Dummy Data}')
-label.DrawLatex(0.48, 0.92, '#sqrt{s} = 13 TeV, L_{int} = 100 fb^{-1}')
+label.DrawLatex(0.58, 0.92, '#sqrt{s} = 13 TeV, L_{int} = 100 fb^{-1}')
 
 # Save as png file and show interactively
 c.SaveAs('dummy_data.png')
@@ -52,13 +52,13 @@ c.Draw()
 ```
 
 ```
- FCN=26.7007 FROM MIGRAD    STATUS=CONVERGED      67 CALLS          68 TOTAL
-                     EDM=2.93031e-07    STRATEGY= 1      ERROR MATRIX ACCURATE
+ FCN=30.2937 FROM MIGRAD    STATUS=CONVERGED      67 CALLS          68 TOTAL
+                     EDM=1.34686e-08    STRATEGY= 1      ERROR MATRIX ACCURATE
   EXT PARAMETER                                   STEP         FIRST
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE
-   1  p0           7.67275e+01   3.10311e+00   6.32604e-03   1.14875e-04
-   2  p1           1.20750e-03   3.34953e-02   8.53505e-05   1.27706e-03
-   3  p2           1.01449e+00   2.60042e-02   5.27249e-05   3.58705e-02
+   1  p0           8.09397e+01   3.19887e+00   7.10307e-03  -3.40988e-05
+   2  p1          -3.46483e-03   3.10501e-02   8.47265e-05  -2.30742e-03
+   3  p2           9.56532e-01   2.24141e-02   4.97399e-05   2.58872e-03
 Info in <TCanvas::Print>: file dummy_data.png has been created
 ```
 
@@ -215,7 +215,7 @@ print(pdf)
     });
  });
 </script>
-<div id="drawing" style="width:600; height:600px"></div>
+<div id="drawing" style="width: 800px; height:600px"></div>
 
 
 {% include links.md %}
