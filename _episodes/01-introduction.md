@@ -8,7 +8,7 @@ questions:
 objectives:
 - "Understand what you can learn in this lesson!"
 keypoints:
-- "You'll learn how to install ROOT on your system or get access to systems with ROOTpre-installed!"
+- "You'll learn how to install ROOT on your system or get access to systems with ROOT pre-installed!"
 - "You'll learn how to use ROOT in C++ and Python!"
 - "You'll learn about commonly used features in ROOT!"
 - "You'll learn how to get help with ROOT!"
