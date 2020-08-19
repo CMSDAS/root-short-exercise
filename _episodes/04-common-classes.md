@@ -63,14 +63,14 @@ Info in <TCanvas::Print>: file dummy_data.png has been created
 ```
 
 > ## Try it by yourself!
-> Run the code example by yourself! Remember that you can prevent the Python interpreter to shut down with `python -i your_script.py`.
+> Run the example code by yourself! In case the execution ends without displaying the plot on screen, you can run the script in interpreted mode with `python -i your_script.py`. That will keep the process alive as long as a plot is displayed.
 {: .challenge}
 
 ![](../fig/dummy_data.png)
 
 ## Investigating data in ROOT files
 
-You have already seen the usage of `TTree::Draw` in the previous episode. Such quick investigations of data in ROOT files are typical usecases, which most analysts do on a daily basis. In the following you can learn about different ways to approach this task!
+You have already seen the usage of `TTree::Draw` in the previous section. Such quick investigations of data in ROOT files are typical usecases which most analysts encounter on a daily basis. In the following you can learn about different ways to approach this task!
 
 ### Manually plotting with `TTree::Draw`
 
@@ -102,21 +102,36 @@ $ root https://root.cern/files/tmva_class_example.root
 root [0]
 Attaching file https://root.cern/files/tmva_class_example.root as _file0...
 (TFile *) 0x557892a0ef10
-root [1] new TBrowser
-(TBrowser *) 0x5578938de800
+root [1] TBrowser b
+(TBrowser &) Name: Browser Title: ROOT Object Browser
 ```
 
 ### The `rootbrowse` executable
 
-For convenience, ROOT provides the executable `rootbrowse`, which let you open a `TBrowser` directly from the command line and attachs the files given as arguments!
+For convenience, ROOT provides the executable `rootbrowse`, which lets you open a `TBrowser` directly from the command line and display the files given as arguments!
 
 ```bash
-rootbrowse https://root.cern/files/tmva_class_example.root
+$ rootbrowse https://root.cern/files/tmva_class_example.root
 ```
 
 <kbd>
 <img src="../fig/root_browser.png">
 </kbd>
+
+### Other ROOT executables
+
+There are many small helpers shipped with ROOT, which let you operate on data quickly from the command line and solve typical day-to-day tasks with ROOT files.
+
+**List of ROOT executables**
+- `rootbrowse`: Open a ROOT file and a TBrowser
+- `rootls`: List file content, tree branches, objects’ stats
+- `rootcp`: Copy objects within a file or between files
+- `rootdrawtree`: Simple analyses from the command line
+- `rooteventselector`: Select branches, events, compression algorithms and extract slimmer trees
+- `rootmkdir`: Creates a directory in a TFile
+- `rootmv`: Move objects between files
+- `rootprint`: Print objects in plots on files
+- `rootrm`: Remove objects from files
 
 ```bash
 $ rootls https://root.cern/files/tmva_class_example.root
@@ -152,38 +167,22 @@ TTree  Jan 19 14:25 2009 TreeS  "TreeS"
   The total number of clusters is 2
 ```
 
-### Other ROOT executables
-
-There are many small helpers shipped with ROOT, which let you operate on data quickly from the command line and solve typical day-to-day tasks with ROOT files.
-
-**List of ROOT executables**
-- `rootbrowse`: Open a ROOT file and a TBrowser
-- `rootls`: List file content, tree branches, objects’ stats
-- `rootcp`: Copy objects within a file or between files
-- `rootdrawtree`: Simple analyses from the command line
-- `rooteventselector`: Select branches, events, compression algorithms and extract slimmer trees
-- `rootmkdir`: Creates a directory in a TFile
-- `rootmv`: Move objects between files
-- `rootprint`: Print objects in plots on files
-- `rootrm`: Remove objects from files
 
 > ## Try it by yourself!
-> Feel free to investigate the presented tools!
+> Feel free to investigate the tools presented here!
 {: .challenge}
 
 ## Interoperability with NumPy arrays
 
-- Link to https://root.cern/doc/master/df026__AsNumpyArrays_8py.html
-
-There are many reasons, for example machine learning, that you probably want to export you rdata in Python to NumPy arrays. This is easily possible with ROOT and is part of RDataFrame. The code snipplets below show you how to do this conversion and how to move the data to typical tools in the Python ecosystem, e.g., `numpy` and `pandas`.
+There are many reasons, for example machine learning applications, to want to export your data in Python to NumPy arrays. This is easily possible with ROOT and is part of RDataFrame. The code snippets below show you how to do this conversion and how to move the data to typical tools in the Python ecosystem, e.g., `numpy` and `pandas`.
 
 > ## numpy and pandas
-> Have you installed `numpy` and `pandas` or are you on a system, which have them available? Normally, you can just run `pip install --user numpy pandas` to install missing packages! Another option is searching in your system package manager, they are typically available on all platforms.
+> Have you installed `numpy` and `pandas` or are you on a system which has them available? Normally, you can just run `pip install --user numpy pandas` to install missing packages! Another option is searching in your system package manager, they are typically available on all platforms.
 {: .callout}
 
 ### Convert data in ROOT files to numpy arrays
 
-The conversion feature is attached to the class RDataFrame. We will not introduce you here to this way to process data with ROOT because the following episode is dedicated to RDataFrame. For now, just keep in mind that you call `AsNumpy`! The data is returned as an dictionary of one-dimensional numpy arrays because each column can have a different data type.
+The conversion feature is attached to the class RDataFrame. We will not introduce you here to this way to process data with ROOT because the following section is dedicated to RDataFrame. For now, just keep in mind that you call `AsNumpy`! The data is returned as a dictionary of one-dimensional numpy arrays.
 
 ```python
 # Read out the data as a dictionary of numpy arrays
@@ -200,7 +199,7 @@ var1: [-1.1436108   2.1434433  -0.44391322 ...  0.37746507 -2.072639 -0.09141494
 
 ### Move the data to numpy or pandas
 
-The data can be passed naturally to any method in the Python ecosystem, which processes numpy arrays. Below is an example, which computes the mean of each column.
+The data can be passed naturally to any method in the Python ecosystem which processes numpy arrays. Below is an example that computes the mean of each column.
 
 ```python
 # Apply numpy methods
@@ -212,7 +211,7 @@ print('Means: {}'.format([np.mean(data[c]).item() for c in columns]))
 Means: [0.18244409561157227, 0.28425973653793335, 0.3789360225200653, 0.7712161540985107]
 ```
 
-Another interesting usecase is moving the dataset directly to a pandas dataframe. You can use the output of `AsNumpy` as input for the constructor and the data is directly available.
+Another interesting usecase is moving the dataset directly to a pandas dataframe. You can use the output of `AsNumpy` directly as input to its constructor.
 
 ```python
 # Convert to a pandas dataframe
@@ -250,11 +249,11 @@ ROOT provides a deep integration with Jupyter notebooks. You can start a Jupyter
 root --notebook
 ```
 
-Alternatively, you can go to [https://swan.cern.ch](https://swan.cern.ch), which provides this service for you. Note that you may have to visit [https://cernbox.cern.ch/](https://cernbox.cern.ch/) first at least once with your user account to create your CERNBox space!
+Alternatively, you can go to [https://swan.cern.ch](https://swan.cern.ch), which provides Jupyter notebooks integrated with CERN's cloud storage as a web service. Note that you may have to visit [https://cernbox.cern.ch](https://cernbox.cern.ch) first at least once with your user account to create your CERNBox space!
 
 ### Python kernel
 
-The typical use case of Jupyter is together with the Python kernel. You will see something similar to the screenshot below and you can work interactively with Python in the browser!
+Jupyter is often use to edit Python code interactively. By creating a new notebook with a Python kernel, you will see something similar to the screenshot below and you can work interactively with Python in the browser!
 
 <kbd>
 <img src="../fig/jupyter_python.png">
@@ -262,7 +261,7 @@ The typical use case of Jupyter is together with the Python kernel. You will see
 
 ### C++ kernel
 
-ROOT provides the same than the Python kernel but for C++! Similar to the ROOT prompt, you can work interactively with C++ in the notebook. Just select the C++ kernel in the dropdown menu!
+ROOT provides a Jupyter C++ kernel, which behaves similarly to the Python kernel but for C++! Similar to the ROOT prompt, you can work interactively with C++ in the notebook. Just select the C++ kernel in the drop-down menu!
 
 <kbd>
 <img src="../fig/jupyter_cpp.png">
@@ -270,9 +269,9 @@ ROOT provides the same than the Python kernel but for C++! Similar to the ROOT p
 
 ### JSROOT
 
-Another feature of ROOT is the `%jsroot on` magic, which enables ROOT for JavaScript! This allows you to interact with the visualization such as you are used to it from the interactive graphics in the Python prompt.
+Another feature of ROOT is the `%jsroot on` magic, which enables ROOT's JavaScript integration! This allows you to interact with the visualization such as you are used to it from the interactive graphics in the Python prompt.
 
-Because it's JavaScript, we can also embed these plots easily in any website! You can find the plot from the top of this episode as an interactive graphic below.
+Because it's JavaScript, we can also embed these plots easily in any website! You can find an interactive version of the plot from the top of this section at the bottom of the page.
 
 <kbd>
 <img src="../fig/jupyter_jsroot.png">
