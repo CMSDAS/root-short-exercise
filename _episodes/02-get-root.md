@@ -3,13 +3,13 @@ title: "Get ROOT"
 teaching: 10
 exercises: 5
 questions:
-- "How to install ROOT on my system or get access to systems with ROOT?"
+- "How to install ROOT on my system or get access to systems with ROOT pre-installed?"
 objectives:
-- "Find for you the most efficient way to get access to ROOT"
-- "Install ROOT or connect to a machine with ROOT already made available"
+- "Find the most efficient way for you to get access to ROOT"
+- "Install ROOT or connect to a machine with ROOT already installed"
 keypoints:
-- "ROOT is accessible via many sources"
-- "Detailed instructions being up-to-date can be found on [https://root.cern/install](https://root.cern/install)"
+- "ROOT is accessible in several different ways"
+- "Detailed up-to-date instructions can be found at [https://root.cern/install](https://root.cern/install)"
 ---
 
 > This section shows you multiple ways to get ROOT. Find below solutions to run ROOT locally, on LXPLUS, in batch systems and CIs!
@@ -19,7 +19,7 @@ keypoints:
 
 [Conda](https://docs.conda.io/en/latest/) is a package management system and environment management system, which can install ROOT in a few minutes on Linux and MacOS.
 
-The fastes way to get ROOT is [installing Miniconda](https://docs.conda.io/en/latest/miniconda.html) (a minimal Conda installer) and then run the following two commands:
+The fastes way to get ROOT is [installing Miniconda](https://docs.conda.io/en/latest/miniconda.html) (a minimal Conda installation) and then run the following two commands:
 
 ```bash
 conda create -c conda-forge --name <my-environment> root
@@ -30,13 +30,13 @@ You can find detailed information about ROOT on Conda in [this blog post](https:
 
 ## CVMFS
 
-[CVMFS](https://cernvm.cern.ch/portal/filesystem) is a software distribution service and in HEP on many systems already set up. CMSSW including ROOT is distributed via CVMFS, but also other software stacks are available that contain ROOT.
+[CVMFS](https://cernvm.cern.ch/portal/filesystem) is a software distribution service that is already set up on many HEP systems. CMSSW including ROOT is distributed via CVMFS, but also other software stacks are available that contain ROOT.
 
 Most notably, the CERN service [LXPLUS](http://information-technology.web.cern.ch/services/lxplus-service) has CVMFS always installed and enables rapid access to software and computing resources.
 
 ### CMSSW
 
-Following commands let you find out quickly which ROOT version comes with CMSSW.
+The following commands let you find out quickly which ROOT version comes with CMSSW.
 
 ```bash
 # Source setup tools
@@ -55,9 +55,9 @@ scram tool list | grep root
 
 ### LCG
 
-Another possibility to get ROOT via CVMFS are the LCG stacks. All information about the releases and containing packages can be found on [http://lcginfo.cern.ch/](http://lcginfo.cern.ch/). Most releases are available as a Python 2 and Python 3 version, for example [`98`](http://lcginfo.cern.ch/release/98/) and [`98python3`](http://lcginfo.cern.ch/release/98python3/). There are also development releases every night, which contain the latest ROOT release in [`dev4`](http://lcginfo.cern.ch/release/dev3/) and the very latest developments from ROOT master in [`dev3`](http://lcginfo.cern.ch/release/dev3/).
+Another option to get ROOT via CVMFS are the LCG releases. All information about the releases and contained packages can be found at [http://lcginfo.cern.ch/](http://lcginfo.cern.ch/). Most releases are available as a Python 2 and Python 3 version, for example [`98`](http://lcginfo.cern.ch/release/98/) and [`98python3`](http://lcginfo.cern.ch/release/98python3/). There are also development releases every night, which contain the latest ROOT release in [`dev4`](http://lcginfo.cern.ch/release/dev4/) and the very latest developments from ROOT master in [`dev3`](http://lcginfo.cern.ch/release/dev3/).
 
-The following example shows you how to source LCG 98 based on Python 3 on a CentOS 7 machine such as LXPLUS. Note the platform and compiler dependent information in the path, which have to be adjusted based on your system. The available combinations are shown on the website.
+The following example shows you how to source LCG 98 based on Python 3 on a CentOS 7 machine such as those on LXPLUS. Note the platform and compiler dependent information in the path, which have to be adjusted based on your system. The available combinations are shown on the website.
 
 ```bash
 source /cvmfs/sft.cern.ch/lcg/views/LCG_98python3/x86_64-centos7-gcc10-opt/setup.sh
@@ -65,27 +65,27 @@ source /cvmfs/sft.cern.ch/lcg/views/LCG_98python3/x86_64-centos7-gcc10-opt/setup
 
 ## Docker
 
-If you want to use ROOT in a CI, most likely the software will be made available via Docker. The official ROOT docker contain can be found on [https://hub.docker.com/r/rootproject/root](https://hub.docker.com/r/rootproject/root). The different base images and ROOT versions are encoded in the tags, for example `6.22.00-fedora32`, and `latest` will get you the latest ROOT release based on Ubuntu 20.04. If you want to try it, [get Docker](https://docs.docker.com/get-docker/) and run the following command to start the container with a bash shell.
+If you want to use ROOT in a CI system (e.g. GitLab pipelines or GitHub actions), most likely the software will be made available via Docker. The official ROOT docker containers can be found at [https://hub.docker.com/r/rootproject/root](https://hub.docker.com/r/rootproject/root). The different base images and ROOT versions are encoded in the tags, for example `6.22.00-ubuntu20.04`, and `latest` will get you the latest ROOT release (v6.22) based on Ubuntu 20.04. If you want to try it, [get Docker](https://docs.docker.com/get-docker/) and run the following command to start the container with a bash shell.
 
 ```bash
-run --rm -it rootproject/root /bin/bash
+docker run --rm -it rootproject/root /bin/bash
 ```
 
 ## Binary releases and packages
 
 The classic way to distribute software, besides the source code, are plain binary releases. You can download these from the release pages on [https://root.cern/install/all_releases/](https://root.cern/install/all_releases/) for all major MacOS and Linux versions.
 
-In addition, the ROOT community maintains for some Linux distributions, e.g., Arch Linux, packages in the respective package managers. You can find a list of maintained packages on [https://root.cern/install/#linux-package-managers](https://root.cern/install/#linux-package-managers).
+In addition, for some Linux distributions, the ROOT community maintains packages in the respective package managers. You can find a list of maintained packages at [https://root.cern/install/#linux-package-managers](https://root.cern/install/#linux-package-managers).
 
 ## Verify the ROOT version
 
-Since ROOT has a long history and numerous releases, you may find on old systems such Scientific Linux 6 also old ROOT versions. However, you can easily verify with following commands the version of ROOT and also find expert details about the ROOT configuration!
+Since ROOT has a long history and numerous releases, on old systems such Scientific Linux 6 you may find correspondingly old ROOT versions. However, with the following commands you can easily verify your ROOT version and also find expert details about the ROOT configuration!
 
 ```bash
 # ROOT version and build tag
 root --version
 
-# Again the ROOT version
+# Again the ROOT version (this also works with older ROOT versions)
 root-config --version
 
 # Expert details about the ROOT configuration
@@ -98,7 +98,7 @@ root-config --help
 
 
 > ## Fallback solution
-> As a fallback solution you can always connect via `ssh -Y your_username@lxplus.cern.ch` to LXPLUS. The `-Y` flag enables X forwarding, which allows you to forward the output of graphics application in case you run a system with an X server such as almost all Linux distributions.
+> As a fallback solution you can always connect to LXPLUS via `ssh -Y your_username@lxplus.cern.ch`. The `-Y` flag enables X forwarding, which allows you to forward the output of graphics application in case you run a system with an X server such as almost all Linux distributions.
 {: .solution}
 
 {% include links.md %}
