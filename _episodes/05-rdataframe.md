@@ -5,12 +5,12 @@ exercises: 5
 questions:
 - "How can I perform efficient analysis with ROOT?"
 objectives:
-- "Understand the concept of declarative programming"
 - "Learn about the basics of RDataFrame"
+- "Understand RDataFrame's lazy event loop feature"
 - "Find out how to run your analysis on multiple threads"
 keypoints:
 - "`RDataFrame` is the recommended entry point for efficient analysis"
-- "`RDataFrame` follows a declarative workflow: Declare first what you want to do and let ROOT run all of your tasks as efficiently as possible in one go, in parallel!"
+- "`RDataFrame` is lazy: declare first what you want to do and let ROOT run all of your tasks as efficiently as possible in one go, in parallel!"
 - "Parallelization on multiple threads requires only the `ROOT.EnableImplicitMT()` statement"
 ---
 
