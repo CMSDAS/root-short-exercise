@@ -99,7 +99,7 @@ ROOT.gStyle.SetTextFont(42)
 c = ROOT.TCanvas("c", "", 800, 700)
 # The contents of one of the dataframe results are accessed for the first time here:
 # this is when all results will actually be produced!
-h.GetXaxis().SetTitleSize(0.04);
+h.GetXaxis().SetTitleSize(0.04)
 h.GetYaxis().SetTitleSize(0.04)
 c.SetLogx(); c.SetLogy()
 h.Draw()
