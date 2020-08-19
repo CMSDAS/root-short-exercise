@@ -10,8 +10,8 @@ objectives:
 - "Learn about the ROOT forum to get help!"
 keypoints:
 - "User support is an integral part of ROOT!"
-- "[https://root.cern](https://root.cern) is the entry point to find all documentation and the forum"
-- "[The reference guide](https://root.cern/doc/master/index.html) provides in depth technical documentation, but also additional explanation for classes and a huge amount of tutorials explaining features with code"
+- "[https://root.cern](https://root.cern) is the entry point to find all documentation"
+- "[The reference guide](https://root.cern/doc/master/index.html) provides in-depth technical documentation, but also additional explanation for classes and a huge amount of tutorials explaining features with code"
 - "[The ROOT forum](https://root-forum.cern.ch/) is actively maintained by the ROOT team to support you!"
 ---
 
@@ -25,9 +25,9 @@ keypoints:
 > Communication channels for support and discussion dedicated to this lesson are linked on the [front page](/)!
 {: .keypoints}
 
-## The ROOT website, the beginner's guide and the topical manuals
+## The ROOT website, the beginner's guide and the manual
 
-The [ROOT website](https://root.cern) is home to the [beginner's guide](https://root.cern/primer/) and the more in depth [topical manuals](https://root.cern/manual/). These are a great resource to start with ROOT and learn about parts of the framework in high detail. Keep in mind the ROOT website on [https://root.cern](https://root.cern), which provides links to all resources in a single place!
+The [ROOT website](https://root.cern) is home to the [beginner's guide](https://root.cern/primer/) and the more in-depth [manual](https://root.cern/manual/). These are a great resource to start with ROOT and learn about parts of the framework in high detail. Keep in mind the ROOT website at [https://root.cern](https://root.cern), which provides links to all resources in a single place!
 
 <kbd>
 <img src="../fig/root_web.png">
