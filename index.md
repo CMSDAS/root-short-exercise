@@ -9,7 +9,7 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 > ## Welcome to a lesson about efficient analysis with ROOT!
 > Hi, here is Stefan and Enrico and you are about to learn how to perform efficient data analysis with ROOT!
 >
-> The lesson starts with a first set of episodes providing more general information about ROOT and an introduction to the very basics. The second part allows you to gain hands-on experience with the modern analysis facilities in ROOT using an example analysis based on NanoAOD files.
+> The lesson starts with a first set of episodes providing more general information and an introduction to the very basics. The second part allows you to gain hands-on experience with modern analysis facilities using an example analysis based on NanoAOD files.
 {: .callout}
 
 > ## How does this work?
