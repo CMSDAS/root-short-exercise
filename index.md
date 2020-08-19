@@ -20,8 +20,7 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 > - Welcome video?
 > - Adapt time estimates in all episodes
 > - Add a short description of the lesson on the TWiki
-> - Lesson 4: Commonly used features in ROOT
-> - Lesson 6: CMS channels to get help with ROOT?
+> - In episode 6: There are CMS channels to get help with ROOT?
 > - Remove this box
 {: .checklist}
 

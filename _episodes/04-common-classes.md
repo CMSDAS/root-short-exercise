@@ -1,7 +1,7 @@
 ---
 title: "Commonly used features in ROOT"
 teaching: 10
-exercises: 0
+exercises: 10
 questions:
 - "Which ROOT features am I likely to use in my analysis?"
 objectives:

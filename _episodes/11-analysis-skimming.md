@@ -1,7 +1,7 @@
 ---
 title: "NanoAOD analysis: Skim the initial datasets"
 teaching: 5
-exercises: 10
+exercises: 5
 questions:
 - "How can I process large amounts of data efficiently?"
 - "How does an analysis with RDataFrame looks like in C++?"

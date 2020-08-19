@@ -1,7 +1,7 @@
 ---
 title: "NanoAOD analysis: Introduction"
-teaching: 15
-exercises: 0
+teaching: 10
+exercises: 10
 questions:
 - "What am I supposed to learn from this analysis?"
 - "What is the physics behind the data?"

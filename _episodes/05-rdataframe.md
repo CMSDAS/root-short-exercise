@@ -1,7 +1,7 @@
 ---
 title: "Efficient analysis with RDataFrame"
 teaching: 10
-exercises: 0
+exercises: 5
 questions:
 - "How can I perform efficient analysis with ROOT?"
 objectives:

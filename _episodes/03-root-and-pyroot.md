@@ -1,7 +1,7 @@
 ---
 title: "ROOT in C++ and Python"
 teaching: 10
-exercises: 0
+exercises: 5
 questions:
 - "Should I use ROOT in C++ or Python?"
 objectives:

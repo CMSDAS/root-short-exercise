@@ -1,7 +1,7 @@
 ---
 title: "NanoAOD analysis: Make the plots"
 teaching: 5
-exercises: 10
+exercises: 5
 questions:
 - "How can I make high quality plots with ROOT?"
 objectives:
