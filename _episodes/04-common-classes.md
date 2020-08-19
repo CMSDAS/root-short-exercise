@@ -271,7 +271,7 @@ ROOT provides a Jupyter C++ kernel, which behaves similarly to the Python kernel
 
 Another feature of ROOT is the `%jsroot on` magic, which enables ROOT's JavaScript integration! This allows you to interact with the visualization such as you are used to it from the interactive graphics in the Python prompt.
 
-Because it's JavaScript, we can also embed these plots easily in any website! You can find an interactive version of the plot from the top of this section at the bottom of the page.
+Because it's JavaScript, we can also embed these plots easily in any website. You can find an interactive version of the plot from the top of this section at the bottom of the page. For example, you can zoom in, add grid lines or get detailed information about the data points, right here!
 
 <kbd>
 <img src="../fig/jupyter_jsroot.png">
