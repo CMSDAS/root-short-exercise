@@ -5,13 +5,13 @@ exercises: 5
 questions:
 - "Should I use ROOT in C++ or Python?"
 objectives:
-- "Run with ROOT C++ code interactively!"
+- "Run C++ code interactively with ROOT!"
 - "Compile C++ programs using ROOT!"
 - "Use ROOT in Python!"
 keypoints:
 - "The choice of interactive C++, compiled C++ or Python is based on the use case!"
-- "Usage of compiled C++ may safe you hours of computing time!"
-- "PyROOT allows you to use C++ from Python but offers many more advanced features to speed up your analysis in Python. Details about the dynamic Python bindings provided by PyROOT can be found on [https://root.cern/manual/python/](https://root.cern/manual/python/)."
+- "Usage of compiled C++ may save you hours of computing time!"
+- "PyROOT lets you use C++ from Python but offers many more advanced features to speed up your analysis in Python. Details about the dynamic Python bindings provided by PyROOT can be found on [https://root.cern/manual/python/](https://root.cern/manual/python/)."
 ---
 
 > This section shows you the difference between using ROOT with interactive C++, compiled C++ and Python.
@@ -19,11 +19,11 @@ keypoints:
 
 ## Interactive C++
 
-One of the main features of ROOT is the possibility to use C++ interactively thanks to the C++ interpreter [Cling](https://root.cern/cling/). Cling allows you to use C++ just like Python either from the prompt or in a scripts.
+One of the main features of ROOT is the possibility to use C++ interactively thanks to the C++ interpreter [Cling](https://root.cern/cling/). Cling lets you use C++ just like Python either from the prompt or in scripts.
 
 ### The ROOT prompt
 
-By just typing `root` in the termianl you will enter the ROOT prompt. Like python, the prompt is well suited to make fast investigations.
+By just typing `root` in the terminal you will enter the ROOT prompt. Like the Python prompt, the ROOT prompt is well suited to fast investigations.
 
 ```bash
 $ root
@@ -31,7 +31,7 @@ root [0] 1+1
 (int) 2
 ```
 
-If you pass a file as argument to `root`, the file will be opened when entering the prompt and put in the variable `_file0`. ROOT comes typically with support for reading files remotely via HTTP (and [XRootD](https://xrootd.slac.stanford.edu/)), which we will use for the following example:
+If you pass a file as argument to `root`, the file will be opened when entering the prompt and put in the variable `_file0`. ROOT typically comes with support for reading files remotely via HTTP (and [XRootD](https://xrootd.slac.stanford.edu/)), which we will use for the following example:
 
 > ## No support for remote files?
 > Although unlikely, your ROOT build may not be configured to support remote file access. In this case, you can just download the file with `curl -O https://root.cern/files/tmva_class_example.root` and point to your local file. No other changes required!
@@ -52,7 +52,7 @@ TWebFile**              https://root.cern/files/tmva_class_example.root
 
 root [2] TreeS->GetEntries() // Number of events in the dataset
 
-root [3] TreeS->Print() // Show content of the dataset
+root [3] TreeS->Print() // Show dataset structure
 ******************************************************************************
 *Tree    :TreeS     : TreeS                                                  *
 *Entries :     6000 : Total =           98896 bytes  File  Size =      89768 *
@@ -86,7 +86,7 @@ root [4] TreeS->Draw("var1") // Draw a histogram of the variable var1
 
 ### ROOT scripts
 
-A unique feature of ROOT is the possibility to use C++ scripts. A ROOT script contains valid C++ code and uses as entrypoint a function with the same name than the script. Let's take as example the file `myScript.C` with the following content.
+A unique feature of ROOT is the possibility to use C++ scripts, also called "ROOT macros". A ROOT script contains valid C++ code and uses as entrypoint a function with the same name as the script. Let's take as example the file `myScript.C` with the following content.
 
 ```cpp
 void myScript() {
@@ -120,7 +120,7 @@ You can improve the runtime of your programs if you compile them upfront. Theref
 
 ROOT provides a mechanism called ACLiC to compile the script in a shared library and call the compiled code from interactive C++, all automatically!
 
-Before trying out, we have to add the used headers to the script, which is a difference to the fully interactive option!
+The only change required to our script is that we need to include all required headers:
 
 ```cpp
 #include "TFile.h"
@@ -128,7 +128,7 @@ Before trying out, we have to add the used headers to the script, which is a dif
 #include <iostream>
 
 void myScript() {
-    // Here comes the rest of the myScript.C from above
+    // The body of the myScript function goes here
 }
 ```
 
@@ -148,7 +148,7 @@ TreeB : 6000
 
 Of course, the C++ code can also just be compiled with C++ compilers such as `g++` or `clang++` with the advantage that you have full control of all compiler settings, most notable the optimization flags such as `-O3`!
 
-To do so, we have to add a the `main` function to the script, which is the default for C(++) programs to enter the program.
+To do so, we have to add the `main` function to the script, which is the default entrypoint for C(++) programs.
 
 ```cpp
 #include "TFile.h"
@@ -156,15 +156,16 @@ To do so, we have to add a the `main` function to the script, which is the defau
 #include <iostream>
 
 void myScript() {
-    // Here comes the rest of the myScript.C from above
+    // The body of the myScript function goes here
 }
 
 int main() {
     myScript();
+    return 0;
 }
 ```
 
-Now, you can use the following command with the C++ compiler of your choice to compile the script into an executable.
+Now, you can use the following command with your C++ compiler of choice to compile the script into an executable.
 
 ```bash
 $ g++ -O3 -o myScript myScript.C $(root-config --cflags --libs)
@@ -173,11 +174,11 @@ TreeS : 6000
 TreeB : 6000
 ```
 
-Computationally heavy programs and long running analysis may benefit greatly from the optimized compilation with `-O3` and can safe you yours of computing time!
+Computationally heavy programs and long running analyses may benefit greatly from the optimized compilation with `-O3` and can save you hours of computing time!
 
 ## Python
 
-ROOT provides the Python bindings called PyROOT. PyROOT is not just ROOT from Python, but a full featured interface to call C++ libraries in a pythonic way. This allows you to import the ROOT module from Python and makes all features dynamically available. Let's rewrite the C++ example from above and put the code in the file `myScript.py`!
+ROOT provides the Python bindings called PyROOT. PyROOT is not just ROOT from Python, but a full-featured interface to call C++ libraries in a pythonic way. This lets you import the ROOT module from Python and makes all features dynamically available. Let's rewrite the C++ example from above and put the code in the file `myScript.py`!
 
 ```python
 import ROOT
@@ -204,7 +205,7 @@ import ROOT
 
 ROOT.gInterpreter.Declare('''
 int my_heavy_computation(std::string x) {
-    // heavy computation comes here
+    // heavy computation goes here
     return x.length();
 }
 ''')
@@ -215,8 +216,8 @@ y = ROOT.my_heavy_computation("the ultimate answer to life and everything")
 print(y) # Guess the result!
 ```
 
-A guide to such advanced features of PyROOT can be found in the manual on [https://root.cern/manual/python/](https://root.cern/manual/python/). Feel free to investigate!
+A guide to such advanced features of PyROOT can be found in the official manual at [https://root.cern/manual/python/](https://root.cern/manual/python/). Feel free to investigate!
 
 > ## Try using ROOT with interactive C++, compiled C++ and Python!
-> Make yourself familiar with the different tools to run an analysis with ROOT!
+> Make yourself familiar with the different ways you can run an analysis with ROOT!
 {: .challenge}
