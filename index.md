@@ -18,8 +18,6 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 > ## What is missing in this lesson?
 > - Put contact information on the index page (office hours, discord channel)
 > - Welcome video?
-> - Adapt time estimates in all episodes
-> - Add a short description of the lesson on the TWiki
 > - In episode 6: There are CMS channels to get help with ROOT?
 > - Remove this box
 {: .checklist}
