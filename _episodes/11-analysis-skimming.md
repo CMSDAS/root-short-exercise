@@ -4,13 +4,13 @@ teaching: 5
 exercises: 5
 questions:
 - "How can I process large amounts of data efficiently?"
-- "How does an analysis with RDataFrame looks like in C++?"
+- "How does an analysis with RDataFrame look like in C++?"
 objectives:
 - "Perform this step of the analysis by yourself"
 keypoints:
-- "We reduce the inital datasets by filtering suitable events and the selection of the interesting observables."
+- "We reduced the initial datasets by filtering suitable events and selecting interesting observables."
 - "This step includes finding the interesting muon-tau pair in each selected event."
-- "We use RDataFrame in C++ to perform the computational expensive part of the analysis as efficient as possible and enable the implicit multi-threading!"
+- "To perform this computationally expensive part of the analysis as efficiently as possible, we enable ROOT's implicit multi-threading and use RDataFrame in C++!"
 ---
 
 In this step, the NanoAOD files containing data and simulated events are pre-processed. This step is called skimming since the event selection reduces the size of the datasets significantly. In addition, we perform a pair selection to find from the muon and tau collections the pair which is most likely to have originated from a Higgs boson.
