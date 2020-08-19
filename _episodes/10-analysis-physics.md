@@ -14,7 +14,7 @@ keypoints:
 - "The following steps will show in a hands-on the use of RDataFrame in an actual analysis"
 ---
 
-> This analysis shows you how an analysis with CMS NanoAOD files and RDataFrame can be performed, from the inital files to the result plots.
+> This section shows you how an analysis with CMS NanoAOD files and RDataFrame can be performed, from the inital files to the result plots.
 {: .testimonial}
 
 ## Signal process
@@ -56,7 +56,7 @@ W bosons are frequently produced at the LHC and can decay into any lepton. If a 
 
 ### tt¯
 
-Top anti-top pairs are produced at the LHC by quark anti-quark annihilation or gluon fusion. Because a top quark decays immediately and almost exclusively via a W boson and a bottom quark, additional misidentifications result in signal-like signatures in the detector similar to the $W+\mathrm{jets}$ process explained above. However, the identification of jets originating from bottom quarks, and the subsequent removel of such events, is capable of reducing this background effectively.
+Top anti-top pairs are produced at the LHC by quark anti-quark annihilation or gluon fusion. Because a top quark decays immediately and almost exclusively via a W boson and a bottom quark, additional misidentifications result in signal-like signatures in the detector similar to the $W+\mathrm{jets}$ process explained above. However, the identification of jets originating from bottom quarks, and the subsequent removal of such events, is capable of reducing this background effectively.
 
 ### QCD
 
@@ -67,11 +67,11 @@ The QCD multijet background describes decays with a large number of jets, which 
 The used files and the content of the datasets, for example [the simulated Standard Model Higgs boson produced by Gluon fusion](http://opendata.web.cern.ch/record/12351), can be found on [the CERN Open Data portal](http://opendata.web.cern.ch/record/12350).
 
 > ## Have a look at the content of the (reduced) CMS NanoAOD files!
-> You can just look at the content on the CERN Open Data portal (follow for example [this link](http://opendata.web.cern.ch/record/12351)) or take one of the files you will download below and investigate the content with ROOT, such as shown in the previous episodes!
+> You can just look at the content on the CERN Open Data portal (follow for example [this link](http://opendata.web.cern.ch/record/12351)) or take one of the files you will download below and investigate the content with ROOT, such as shown in the previous sections!
 {: .challenge}
 
 > ## Why NanoAOD?
-> The NanoAOD format is a small version of the MiniAOD format (which is a small version of the AOD format) with a size of about 2 kB/Event. Going towards Run 3 and 4 of the LHC, this format will be very likely the default for most CMS analyses to be able to process an unpreceded amount of data!
+> The NanoAOD format is a small version of the MiniAOD format (which is a small version of the AOD format) with a size of about 2 kB/Event. Going towards Run 3 and 4 of the LHC, this format will be very likely the default for most CMS analyses to be able to process an unprecedented amount of data!
 {: .keypoints}
 
 > ## Why *reduced* NanoAOD?
@@ -80,7 +80,7 @@ The used files and the content of the datasets, for example [the simulated Stand
 
 ## Download the required datasets
 
-Because very likely you will run the code multiple times, we want to speed up the analysis so that you can focus on the software. To do so, download with `xrdcp` the files on your computer or any other system with ROOT (v6.18 or later) available. The size of downloaded files sum up to about 6.5 GB and represent only 10% of the original files you can find on the Open Data portal, which enables you to run the full analysis in a under five minutes.
+Because very likely you will run the code multiple times, we want to speed up the analysis so that you can focus on the software. To do so, download with `xrdcp` the files on your computer or any other system with ROOT (v6.18 or later) available. The size of downloaded files sum up to about 6.5 GB and represent only 10% of the original files you can find on the Open Data portal, which enables you to run the full analysis in under five minutes.
 
 Alternatively, you can download the files manually via HTTP from [https://root.cern/files/HiggsTauTauReduced/](https://root.cern/files/HiggsTauTauReduced/).
 
