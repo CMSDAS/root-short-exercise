@@ -33,15 +33,18 @@ ROOT tries to make parallelization as simple as possible for you. For this reaso
 ```python
 import ROOT
 
-# Enable multi-threading
-ROOT.EnableImplicitMT(0)
+# Enable multi-threading with an auto-detected amount of threads
+ROOT.EnableImplicitMT()
+
+# Enamble multi-threading with the specified amount of threads
+ROOT.EnableImplicitMT(4)
 ```
 
 ## RDataFrame constructor and Filter transformations
 
-A possible way to construct an RDataFrame is passing one (ore more) filepaths and the name of the dataset (`TTree`, here called `Events`).
+A possible way to construct an RDataFrame is passing one (ore more) filepaths and the name of the dataset (i.e. the name of the `TTree` object in the file, which is called `Events` in this section).
 
-Next, you can build a computation graph on top of the root node returned by the constructor. The first basic transformation is applying cuts, here named a Filter node. Note that each transformation returns a new node of the graph and does not change the dataframe object itself!
+Next, you can apply selections and other transormations to the dataframe. The first basic transformation is applying cuts with the `Filter` method. Note that each transformation returns a new, transformed dataframe and does not change the dataframe object itself!
 
 ```python
 # Create dataframe from a (reduced) NanoAOD file
@@ -54,7 +57,7 @@ df_os = df_2mu.Filter("Muon_charge[0] != Muon_charge[1]", "Muons with opposite c
 
 ## Injection of C++ code and Define transformations
 
-The next code block uses PyROOT to inject a C++ implementation of the invariant mass computation. The name of the just-in-time compiled function can be used in the Define node to add a new column to the dataset, which contains the dimuon mass.
+The next code block uses PyROOT to inject a C++ implementation of the invariant mass computation. The name of the just-in-time compiled function can be used in the Define method to add a new column to the dataset, which will contain the dimuon mass.
 
 ```python
 # Compute invariant mass of the dimuon system
@@ -75,26 +78,29 @@ df_mass = df_os.Define("Dimuon_mass", "ComputeInvariantMass(Muon_pt, Muon_eta, M
 
 ## Booking results
 
-You can book at any point in the computation graph results, e.g., histograms or a cut-flow report. Both of them are added below. Please note that RDataFrame is declarative! This means that you do not compute right away, when you book a histogram, but you can accumulate multiple results and compute all of them in one go. The computation (or also called the event loop) is trigger just in the moment when you actually access one of the results!
+At any point, you can book the computation of results, e.g., histograms or a cut-flow report. Both of them are added below. Please note that RDataFrame is lazy! This means that the computation does not run right away, when you book a histogram, but you can accumulate multiple results and compute all of them in one go. The computation of all booked results is triggered only when you actually access one of the results!
 
 ```python
-# Make histogram of the dimuon mass spectrum
+# Book histogram of the dimuon mass spectrum (does not actually run the computation!)
 h = df_mass.Histo1D(("Dimuon_mass", ";m_{#mu#mu} (GeV);N_{Events}", 30000, 0.25, 300), "Dimuon_mass")
 
-# Request a cut-flow report
+# Request a cut-flow report (also does not run the computation yet!)
 report = df_mass.Report()
 ```
 
 ## Computing the result and making a plot
 
-As explained above, accessing a result of the computation graph triggers the event loop. Here, this happens when we access the axis of the histogram. However, you just have to remember to book all results first and then start working with the results to get all required information as fast as possible! At the end, we also print the cut flow report to investigate the efficiency of the filters.
+As explained above, accessing a dataframe result triggers the computation (sometimes called "event loop") of all results booked up to that point. Here, this happens when we access the axis of the histogram. However, you just have to remember to book all results first and then start working with the results so that they can all be computed in one go! At the end, we also print the cut-flow report to investigate the efficiency of the filters.
 
 ```python
 # Produce plot
 ROOT.gStyle.SetOptStat(0)
 ROOT.gStyle.SetTextFont(42)
 c = ROOT.TCanvas("c", "", 800, 700)
-h.GetXaxis().SetTitleSize(0.04); h.GetYaxis().SetTitleSize(0.04)
+# The contents of one of the dataframe results are accessed for the first time here:
+# this is when all results will actually be produced!
+h.GetXaxis().SetTitleSize(0.04);
+h.GetYaxis().SetTitleSize(0.04)
 c.SetLogx(); c.SetLogy()
 h.Draw()
 
