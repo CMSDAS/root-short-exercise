@@ -33,11 +33,12 @@ ROOT tries to make parallelization as simple as possible for you. For this reaso
 ```python
 import ROOT
 
-# Enable multi-threading with an auto-detected amount of threads
-ROOT.EnableImplicitMT()
+# Enable multi-threading with the specified amount of threads
+# Here we run single threaded such as the default without implicit multi-threading.
+ROOT.EnableImplicitMT(1)
 
-# Enamble multi-threading with the specified amount of threads
-ROOT.EnableImplicitMT(4)
+# Or enable multi-threading with an auto-detected amount of threads
+#ROOT.EnableImplicitMT()
 ```
 
 ## RDataFrame constructor and Filter transformations
