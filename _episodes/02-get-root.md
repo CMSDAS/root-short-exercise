@@ -88,12 +88,16 @@ root --version
 # Again the ROOT version (this also works with older ROOT versions)
 root-config --version
 
-# Expert details about the ROOT configuration
+# Check that ROOT was built with C++14 support
+# The output must contain one of -std=c++{14,17,1z}
+root-config --cflags
+
+# List all the ROOT configuration options that can be checked
 root-config --help
 ```
 
 > ## Find your way to access ROOT!
-> For the exercises later you need at least ROOT 6.18. Feel free to set up for yourself your preferred environment satisfying this requirement!
+> For the exercises later you need at least ROOT 6.18 and C++14 support. Feel free to set up for yourself your preferred environment satisfying this requirement!
 {: .challenge}
 
 
