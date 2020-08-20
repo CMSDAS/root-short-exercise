@@ -14,8 +14,8 @@ keypoints:
 - "Parallelization on multiple threads requires only the `ROOT.EnableImplicitMT()` statement"
 ---
 
-> ## Introduction to RDataFrame
-> In this section, you will learn about the recommended tool to perform efficient analysis with ROOT called `RDataFrame`! `RDataFrame` enables you to run all your tasks efficiently in one go and on multiple threads.
+> ## What is RDataFrame?
+> `RDataFrame` is ROOT's high-level interface for efficient data analysis. With `RDataFrame`, it is possible to read, select, modify and write ROOT data, as well as easily produce histograms, cut-flow reports and other results. In this and the following sections, you will learn how to perform data analysis with `RDataFrame`, running all your tasks efficiently on multiple threads!
 {: .testimonial}
 
 > ## Download the dataset
