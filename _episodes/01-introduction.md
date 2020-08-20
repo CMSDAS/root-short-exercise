@@ -18,7 +18,7 @@ keypoints:
 Hi there, a warm welcome to the lesson about efficient analysis with ROOT!
 
 > ## What is ROOT?
-> Most likely you were already in touch with ROOT! But in short, it's an open-source data analysis framework used by high energy physics and others, which let's you save and access your experiment's data, allows you to process the data in a computationally efficient and statistically sound way and gives you access to all tools to produce publication-quality results.
+> Most likely you were already in touch with ROOT! But in short, it's an open-source data analysis framework used by high energy physics and others, which lets you save and access your experiment's data, allows you to process the data in a computationally efficient and statistically sound way and gives you access to all tools to produce publication-quality results.
 {: .testimonial}
 
 
