@@ -55,7 +55,7 @@ scram tool list | grep root
 
 ### LCG
 
-Another option to get ROOT via CVMFS are the LCG releases. All information about the releases and contained packages can be found at [http://lcginfo.cern.ch/](http://lcginfo.cern.ch/). Most releases are available as a Python 2 and Python 3 version, for example [`98`](http://lcginfo.cern.ch/release/98/) and [`98python3`](http://lcginfo.cern.ch/release/98python3/). There are also development releases every night, which contain the latest ROOT release in [`dev4`](http://lcginfo.cern.ch/release/dev4/) and the very latest developments from ROOT master in [`dev3`](http://lcginfo.cern.ch/release/dev3/).
+Another option to get ROOT via CVMFS are the LCG releases. All information about the releases and contained packages can be found at [http://lcginfo.cern.ch](http://lcginfo.cern.ch). Most releases are available as a Python 2 and Python 3 version, for example [`98`](http://lcginfo.cern.ch/release/98/) and [`98python3`](http://lcginfo.cern.ch/release/98python3/). There are also development releases every night, which contain the latest ROOT release in [`dev4`](http://lcginfo.cern.ch/release/dev4/) and the very latest developments from ROOT master in [`dev3`](http://lcginfo.cern.ch/release/dev3/).
 
 The following example shows you how to source LCG 98 based on Python 3 on a CentOS 7 machine such as those on LXPLUS. Note the platform and compiler dependent information in the path, which have to be adjusted based on your system. The available combinations are shown on the website.
 
@@ -73,7 +73,7 @@ docker run --rm -it rootproject/root /bin/bash
 
 ## Binary releases and packages
 
-The classic way to distribute software, besides the source code, are plain binary releases. You can download these from the release pages on [https://root.cern/install/all_releases/](https://root.cern/install/all_releases/) for all major MacOS and Linux versions.
+The classic way to distribute software, besides the source code, are plain binary releases. You can download these from the release pages on [https://root.cern/install/all_releases](https://root.cern/install/all_releases) for all major MacOS and Linux versions.
 
 In addition, for some Linux distributions, the ROOT community maintains packages in the respective package managers. You can find a list of maintained packages at [https://root.cern/install/#linux-package-managers](https://root.cern/install/#linux-package-managers).
 
