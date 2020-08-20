@@ -14,7 +14,7 @@ keypoints:
 - "The following steps will show in a hands-on the use of RDataFrame in an actual analysis"
 ---
 
-> This section shows you how an analysis with CMS NanoAOD files and RDataFrame can be performed, from the inital files to the result plots.
+> The following sections show you how an analysis with CMS NanoAOD files and RDataFrame can be performed, from the inital files to the result plots.
 {: .testimonial}
 
 ## Signal process
