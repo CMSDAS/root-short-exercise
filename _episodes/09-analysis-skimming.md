@@ -50,6 +50,7 @@ Note that all vectors in `RDataFrame` are automatically treated as `RVec`s. You 
 You can adopt memory just by passing the pointer and the length of the vector! This may improve the runtime of your program greatly because copies are costly operations.
 
 ```cpp
+// Adopting memory
 int d[3] = { 1, 2, 3 };
 ROOT::RVec<int> v(d, 3); // { 1, 2, 3 }
 ```
@@ -59,14 +60,14 @@ ROOT::RVec<int> v(d, 3); // { 1, 2, 3 }
 You can use arithmetic operations and masking with `RVec`s, just like with NumPy arrays!
 
 ```cpp
-# Arithmetic operations
+// Arithmetic operations
 ROOT::RVec<int> x = { 1, 2, 3 };
 auto y = pow(x, 2); // { 1, 4, 9 }
 auto z = x + y; // { 2, 6, 12 }
 ```
 
 ```cpp
-# Masking
+// Masking
 ROOT::RVec<int> x = { 0, 1, 2 };
 ROOT::RVec<int> y = { 1, 2, 3 };
 auto z = y[x > 0]; // { 2, 3 }
@@ -75,7 +76,7 @@ auto z = y[x > 0]; // { 2, 3 }
 ### NumPy-like helper functions
 
 ```cpp
-# Sorting, index manipulation, comparison, ...
+// Sorting, index manipulation, comparison, ...
 using namespace ROOT::VecOps;
 RVec<int> x = { 3, 1, 2 };
 auto y = Reverse(Sort(x)); // { 3, 2, 1 }
