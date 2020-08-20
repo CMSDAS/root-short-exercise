@@ -41,7 +41,7 @@ This step is implemented in the file `skim.cxx` [here](../code/skim.cxx) and is 
 
 ## Have you noticed the `ROOT::RVec` class?
 
-`ROOT::RVec` is an extended `std::vector` with additional features  to deal with collections, similar to NumPy arrays. Because `RVec` has the same interface than a `std::vector` you can use them interchangeably! However, following additional features simplifies typical tasks in analysis. You can find the full documentation [here](https://root.cern/doc/master/classROOT_1_1VecOps_1_1RVec.html)!
+`ROOT::RVec` is an extended `std::vector` with additional features  to deal with collections, similar to NumPy arrays. Because `RVec` has the same interface as a `std::vector` you can use them interchangeably! However, following additional features simplifies typical tasks in analysis. You can find the full documentation [here](https://root.cern/doc/master/classROOT_1_1VecOps_1_1RVec.html)!
 
 Note that all vectors in `RDataFrame` are automatically treated as `RVec`s. You can use all features shown below in strings passed to `RDataFrame`!
 
