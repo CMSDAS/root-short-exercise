@@ -22,7 +22,7 @@ This step is again implemented for convenience in Python and can be found in the
 {: .challenge}
 
 > ## Investigate the output!
-> The Python script generates for each variable a `png` and `pdf` image file, which can be viewed with a program of your choice. Only two example outputs are shown below, but you can investigate 34 of such plots after you have run the script!
+> The Python script generates for each variable a `png` and `pdf` image file, which can be viewed with a program of your choice. Only two example outputs are shown below, the visible mass of the di-tau system and the pseudorapidity distribution of the tau, but you can investigate 34 of such plots after you have run the script!
 {: .challenge}
 
 <div class="row">
