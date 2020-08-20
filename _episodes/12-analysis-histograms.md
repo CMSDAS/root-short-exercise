@@ -14,7 +14,7 @@ keypoints:
 - "This step shows the usage of RDataFrame in Python producing a large number of histograms in a single event loop and in parallel!"
 ---
 
-> In the previous section, we produced skimmed datasets from the original files but still preserved information of selected quantities for each event. In this step, we compute histograms of these quantities for all skimmed datasets. Because of the data-driven QCD estimation, similar histograms have to be produced with the selection containing same-charged tau lepton pairs. This sums up to multiple hundreds of histograms which have to be combined into the final plots such as the ones shown above.
+> In the previous section, we produced skimmed datasets from the original files but still preserved information of selected quantities for each event. In this step, we compute histograms of these quantities for all skimmed datasets. Because of the data-driven QCD estimation, similar histograms have to be produced with the selection containing same-charged tau lepton pairs. This sums up to multiple hundreds of histograms which have to be combined into the final plots such as the ones shown in the next section.
 {: .testimonial}
 
 For convenience, this step is implemented in Python in the file `histograms.py`, which you can download [here](../code/histograms.py).
