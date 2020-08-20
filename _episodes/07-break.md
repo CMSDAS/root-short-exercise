@@ -6,6 +6,6 @@ break: 15
 
 ![](https://imgs.xkcd.com/comics/compiling.png)
 
-[You already know xkcd?](https://xkcd.com/)
+[Do you already know xkcd?](https://xkcd.com/)
 
 {% include links.md %}
