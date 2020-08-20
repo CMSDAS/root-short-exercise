@@ -73,7 +73,7 @@ docker run --rm -it rootproject/root /bin/bash
 
 ## Binary releases and packages
 
-The classic way to distribute software, besides the source code, are plain binary releases. You can download these from the release pages on [https://root.cern/install/all_releases](https://root.cern/install/all_releases) for all major MacOS and Linux versions.
+The classic way to distribute software, besides the source code, are plain binary releases. You can download these from the release pages on [https://root.cern/install/all_releases](https://root.cern/install/all_releases) for all major MacOS and Linux versions. If you choose this installation method, make sure [ROOT dependencies](https://root.cern/install/dependencies) are installed on your system. Complete installation instructions for binary releases are available [here](https://root.cern/install/#download-a-pre-compiled-binary-distribution).
 
 In addition, for some Linux distributions, the ROOT community maintains packages in the respective package managers. You can find a list of maintained packages at [https://root.cern/install/#linux-package-managers](https://root.cern/install/#linux-package-managers).
 
