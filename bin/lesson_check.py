@@ -80,6 +80,7 @@ KNOWN_CODEBLOCKS = {
     'language-make',
     'language-matlab',
     'language-python',
+    'language-cpp',
     'language-r',
     'language-shell',
     'language-yaml',
