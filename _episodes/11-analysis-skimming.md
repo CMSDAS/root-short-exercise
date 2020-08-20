@@ -47,7 +47,7 @@ Note that all vectors in `RDataFrame` are automatically treated as `RVec`s. You 
 
 ### Adopting memory
 
-You can adopt memory just by passing the pointer and the length of the vector! This may improve the runtime of you program greatly because copies are costly operations.
+You can adopt memory just by passing the pointer and the length of the vector! This may improve the runtime of your program greatly because copies are costly operations.
 
 ```cpp
 int d[3] = { 1, 2, 3 };
