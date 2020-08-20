@@ -89,7 +89,7 @@ root --version
 root-config --version
 
 # Check that ROOT was built with C++14 support
-# The output must contain one of -std=c++{14,17,1z}
+# The output must contain one of -std=c++{14,17,1z} so that all code examples of this lesson run!
 root-config --cflags
 
 # List all the ROOT configuration options that can be checked
