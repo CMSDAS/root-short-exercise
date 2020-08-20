@@ -292,4 +292,13 @@ Because it's JavaScript, we can also embed these plots easily in any website. Yo
 > Either run Jupyter locally via `root --notebook` or go to [https://swan.cern.ch](https://swan.cern.ch) to try ROOT in a Jupyter notebook!
 {: .challenge}
 
+## More useful features
+
+ROOT is made for HEP analysis and contains many other features that are useful in typical tasks, for example:
+
+* [TEfficiency](https://root.cern.ch/doc/master/classTEfficiency.html), to handle histograms representing efficiencies and their uncertainties
+* [THStack](https://root.cern.ch/doc/master/classTHStack.html), to stack histograms
+* [TRatioPlot](https://root.cern.ch/doc/master/classTRatioPlot.html), to create ratio plots with the histograms on the top and the ratio with the correct uncertainties on the bottom
+* And many more!
+
 {% include links.md %}
