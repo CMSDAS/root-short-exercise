@@ -11,7 +11,7 @@ objectives:
 keypoints:
 - "The choice of interactive C++, compiled C++ or Python is based on the use case!"
 - "Usage of compiled C++ may save you hours of computing time!"
-- "PyROOT lets you use C++ from Python but offers many more advanced features to speed up your analysis in Python. Details about the dynamic Python bindings provided by PyROOT can be found on [https://root.cern/manual/python/](https://root.cern/manual/python/)."
+- "PyROOT lets you use C++ from Python but offers many more advanced features to speed up your analysis in Python. Details about the dynamic Python bindings provided by PyROOT can be found on [https://root.cern/manual/python](https://root.cern/manual/python/)."
 ---
 
 > This section shows you the difference between using ROOT with interactive C++, compiled C++ and Python.
@@ -218,7 +218,7 @@ y = ROOT.my_heavy_computation("the ultimate answer to life and everything")
 print(y) # Guess the result!
 ```
 
-A guide to such advanced features of PyROOT can be found in the official manual at [https://root.cern/manual/python/](https://root.cern/manual/python/). Feel free to investigate!
+A guide to such advanced features of PyROOT can be found in the official manual at [https://root.cern/manual/python](https://root.cern/manual/python/). Feel free to investigate!
 
 > ## Try using ROOT with interactive C++, compiled C++ and Python!
 > Make yourself familiar with the different ways you can run an analysis with ROOT!
