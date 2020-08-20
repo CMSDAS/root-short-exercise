@@ -23,6 +23,8 @@ This step is implemented in the file `skim.cxx` [here](../code/skim.cxx) and is 
 
 > ## Compile the C++ program!
 > Compile the file [`skim.cxx`](../code/skim.cxx) to an executable!
+>
+> Note that you require ROOT built with C++14 or later. You can find out by looking at the output of `root-config --cflags`, which must contain `-std=c++14` or `-std=c++17`!
 {: .challenge}
 
 > ## Compile the C++ program!
