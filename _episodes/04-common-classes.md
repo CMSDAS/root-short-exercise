@@ -63,7 +63,7 @@ Info in <TCanvas::Print>: file dummy_data.png has been created
 ```
 
 > ## Try it by yourself!
-> Run the example code by yourself! In case the execution ends without displaying the plot on screen, you can run the script in interpreted mode with `python -i your_script.py`. That will keep the process alive as long as a plot is displayed.
+> Run the example code by yourself! In case the execution ends without displaying the plot on screen, you can run the script in interpreted mode with `python -i your_script.py`. That will keep the process alive after the plot is displayed.
 {: .challenge}
 
 ![](../fig/dummy_data.png)
