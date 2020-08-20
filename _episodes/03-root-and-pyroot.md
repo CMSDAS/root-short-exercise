@@ -10,7 +10,7 @@ objectives:
 - "Use ROOT in Python!"
 keypoints:
 - "The choice of interactive C++, compiled C++ or Python is based on the use case!"
-- "Usage of compiled C++ may save you hours of computing time!"
+- "Usage of C++ code, compiled with optimization flags, may save you hours of computing time!"
 - "PyROOT lets you use C++ from Python but offers many more advanced features to speed up your analysis in Python. Details about the dynamic Python bindings provided by PyROOT can be found on [https://root.cern/manual/python](https://root.cern/manual/python/)."
 ---
 
