@@ -71,7 +71,7 @@ The used files and the content of the datasets, for example [the simulated Stand
 {: .challenge}
 
 > ## Why NanoAOD?
-> The NanoAOD format is a small version of the MiniAOD format (which is a small version of the AOD format) with a size of about 2 kB/Event. Going towards Run 3 and 4 of the LHC, this format will be very likely the default for most CMS analyses to be able to process an unprecedented amount of data!
+> The NanoAOD format is a small version of the MiniAOD format (which is a small version of the AOD format) with a size of about 1 kB/Event. Going towards Run 3 and 4 of the LHC, this format will be very likely the default for most CMS analyses to be able to process an unprecedented amount of data!
 {: .keypoints}
 
 > ## Why *reduced* NanoAOD?
