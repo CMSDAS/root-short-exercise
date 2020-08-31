@@ -45,12 +45,15 @@ source /cvmfs/cms.cern.ch/cmsset_default.sh
 # Show CMSSW versions
 scram list
 
-# Setup CMSSW environment (using CMSSW_10_6_15 here)
-cmsrel CMSSW_10_6_15
-cd CMSSW_10_6_15/
+# Setup CMSSW environment (using CMSSW_11_1_3 here)
+cmsrel CMSSW_11_1_3
+cd CMSSW_11_1_3/
 
 # Show information about ROOT
 scram tool list | grep root
+
+# Source this CMSSW release
+cmsenv
 ```
 
 ### LCG
