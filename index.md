@@ -18,6 +18,10 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 > - You can contact us at any time via the Discord channel. Don't hesitate to reach out!
 {: .keypoints}
 
+> ## Thank you for participating!
+> Thank you for participating in this ROOT exercise! We held a close-out session with additional details about some of the discussed ROOT features. The material you can find [here in Jupyter notebooks](https://github.com/CMSDAS/root-close-out).
+{: .testimonial}
+
 <!-- this is an html comment -->
 
 {% include links.md %}
