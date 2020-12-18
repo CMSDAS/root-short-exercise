@@ -15,13 +15,13 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 > ## How does this work?
 > - Each section provides an overview with the estimated timeline, the questions tackled and the learning objectives. Notification boxes will let you know as soon as you can try things on your own and you will find a summary of the contents at the bottom of each section.
 > - Don't hesitate to ask questions, we are happy to help or give additional information!
-> - You can contact us at any time via the Discord channel. Don't hesitate to reach out!
+> - You can contact us at any time via the [CERN Mattermost server](https://mattermost.web.cern.ch/). Don't hesitate to reach out!
 {: .keypoints}
 
+<!--
 > ## Thank you for participating!
 > Thank you for participating in this ROOT exercise! We held a close-out session with additional details about some of the discussed ROOT features. The material you can find [here in Jupyter notebooks](https://github.com/CMSDAS/root-close-out).
 {: .testimonial}
-
-<!-- this is an html comment -->
+-->
 
 {% include links.md %}
